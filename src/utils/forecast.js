@@ -12,9 +12,10 @@ const forecast = (lat, long, callback) => {
             callback('Unable to find location. Try another search', undefined);
         } else if (response.body.location) {
             callback(undefined, {
-                Name: response.body.location.name,
-                Country: response.body.location.country,
-                Region: response.body.location.region
+                forecast: 'high probability of rain today'
+                // Name: response.body.location.name,
+                // Country: response.body.location.country,
+                // Region: response.body.location.region
             });
         }
     })
